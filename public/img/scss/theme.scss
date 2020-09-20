@@ -1,0 +1,13 @@
+@import '~bootstrap/scss/bootstrap.scss';
+body{
+  @media (min-width: 992px) {
+      font-size: 0.775rem;
+  }
+  @media(min-width: 1600px){
+	  font-size: 1rem;
+  }
+}
+.spinaco-theme{
+@import 'theme/main.scss';
+@import 'theme/responsive';
+}

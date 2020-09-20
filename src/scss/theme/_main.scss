@@ -1,0 +1,195 @@
+.navbar{
+    width: 100%;
+	padding-top:3%;
+	height:80px; 
+    .navbar-nav{
+		padding-left:20%;
+     .nav-item{
+		 
+		 float: right;
+		 
+		 margin-left: 5%;
+         .nav-link{
+				line-height: 1.2rem; 
+				opacity: 0.84;
+				color:white;
+				font-synthesis: bold;
+				font-weight: bold;
+				margin-right: 30px;
+				text-transform: uppercase;
+				@media(min-width: 1281px){
+					margin-left: 32px;
+				    margin-right: 32px;
+            }
+          }
+           &:hover, &:active, &.active{
+				.nav-link{
+					opacity: 1;
+				}
+			}
+        }
+
+    }
+}
+.navbar-brand{
+	margin-left: 1%;
+}
+h1, h2, h3, h4, h5, h6, p{
+	font-family: 'Montserrat', sans-serif;
+}
+.header{
+	background-size: cover;
+	background-image: url('../../Assets/img/phoenix-flights-bg.jpg');
+	position: relative;
+	width: 100%;
+	z-index: 1;
+	height:80px;
+	@media(min-width: 1200px){
+		max-height: 1000px;
+	}
+   
+    max-height: 150px;
+    text-align: center;
+    text-transform: uppercase;
+    .menu{
+	    margin-right: 5%;
+	    min-width: 15%;
+    }
+    .header-text{
+	    padding-top: 173px;
+	    h1{
+		    font-size: 8em;
+		    font-weight: 900;
+		    line-height: 0.94;
+			letter-spacing: 8px;
+	    }
+	    p{
+		 	opacity: 0.7;
+		 	font-size: 1.5em;
+		 	font-weight: 200;
+		 	letter-spacing: 5px;
+		 	margin-top: 38px;			    
+	    }
+    }
+}
+/*hero*/
+.defaultHero,
+.roomsHero {
+	min-height: calc(90vh - 66px);
+	background: url("../../Assets/img/hotel_list_2.jpg");
+	display: flex;
+	align-items: center;
+	background-position: center;
+	justify-content: center;
+}
+.roomsHero {
+	background-image: url("../../Assets/img/hotel_list_4.jpg");
+	min-height: 60vh;
+}
+
+/* Banner */
+.banner {
+	display: inline-block;
+	background: rgba($color: #000000, $alpha: 0.5);
+	color: $white;
+	padding: 2rem 1rem;
+	text-align: center;
+	text-transform: capitalize;
+	letter-spacing: normal;
+}
+
+.banner h1 {
+	font-size: 3.7rem;
+	letter-spacing: 0.2em;
+	font-weight: bold;
+}
+.banner div {
+	width: 20rem;
+	height: 15px;
+	background:#fdb44d;
+	;
+	margin: 1.5rem auto;
+}
+
+.banner p {
+	font-size: 1.2rem;
+	margin-bottom: 2rem;
+}
+
+.btn-primary {
+	display: inline-block;
+	text-decoration: none;
+	color: white;
+	border: 3px solid #fdb44d;
+	letter-spacing: 0.1rem;
+	background: transparent;
+	font-family: "montserrat";
+	font-stretch: ultra-expanded;
+	font-size: 19px;
+	padding:0.3em;
+	transition: transform .6s .25s ease-out;
+	text-transform: uppercase;
+	cursor: pointer;
+	
+}
+.btn-primary:hover {
+	background: #d19239;
+	color: #000000;
+}
+
+.section-title{
+	text-align: center;
+	margin-bottom: 4rem;
+}
+
+.section-title h4{
+	font-size: 2rem;
+	letter-spacing: 0.2rem;
+	text-transform: capitalize;
+	margin-bottom: 0.5rem;
+	font-family: montserrat;
+	font-weight: bold;
+	padding-top: 4px;
+}
+
+.section-title div {
+	width: 5rem;
+	height: 5px;
+	margin: auto;
+	background: #fdb44d;
+}
+
+/* Services */
+.services {
+	background: #d4d4d4;
+	text-align: center;
+}
+.services-center {
+   width: 90vw;
+   margin: 0 auto;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+   grid-row-gap: 2rem;
+   grid-column-gap: 50px;
+}
+
+.services h6 {
+	letter-spacing: 0.1em;
+	text-transform: capitalize;
+	font-weight: bold;
+	color:#1a1b1f;
+}
+.service span {
+	font-size:50px;
+	
+	color:#d19239;
+	border-radius: 30px;
+
+}
+.footer{
+	background: rgb(82, 9, 134);
+	width: 100%;
+	height:75px;
+	
+	}
+	
