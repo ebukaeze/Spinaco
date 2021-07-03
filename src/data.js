@@ -443,7 +443,7 @@ export default [
             breakfast: true,
             featured: true,
             description:
-            "A deluxe large double bedroom, with breakfast inclusive, room services, a balcony to view our lovely city",
+            "A deluxe large double bedroom, with breakfast inclusive, room services, a balcony to view our lovely city. 	the housekeepers are ready to serve you anytime you need assistance including laundry, also have a great view of abuja through our decorated balcony, and we also got the best cousines in our restaurant, make and order anytime you feel like. refresh and cool you mind in our soana, and massage room",
             extras: [
               "Plush pillows and breathable bed linens",
               "street art wallpaper",
@@ -680,7 +680,7 @@ export default [
             breakfast: true,
             featured: true,
             description:
-            "A luxirious family sized, three bedroom with breakfast inclusive, room services, a balcony to view our lovely city",
+            "A luxirious family sized, three bedroom with breakfast inclusive, room services, a balcony to view our lovely city. 	the housekeepers are ready to serve you anytime you need assistance including laundry, also have a great view of abuja through our decorated balcony, and we also got the best cousines in our restaurant, make and order anytime you feel like. refresh and cool you mind in our soana, and massage room",
             extras: [
               "Plush pillows and breathable bed linens",
               "bathtobe",
@@ -739,11 +739,12 @@ export default [
             breakfast: true,
             featured: true,
             description:
-            "A luxirious suite with large studio, three bedroom with breakfast inclusive, room services, a balcony to view our lovely city",
+            "A luxirious suite with large studio, three bedroom with breakfast inclusive, room services, a balcony to view our lovely city. 	the housekeepers are ready to serve you anytime you need assistance including laundry, also have a great view of abuja through our decorated balcony, and we also got the best cousines in our restaurant, make and order anytime you feel like. refresh and cool you mind in our soana, and massage room",
             extras: [
               "Plush pillows and breathable bed linens",
               "Game room",
               "Cinema",
+              "water heater",
               "Swimming pool",
               "Soft, oversized bath towels",
               "Full-sized, pH-balanced toiletries",
