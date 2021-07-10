@@ -1,7 +1,20 @@
+:root {
+	--primaryColor: #af9a7d;
+	--mainWhite: #fff;
+	--offWhite: #f7f7f7;
+	--mainBlack: #222;
+	--mainGrey: #ececec;
+	--darkGrey: #cfcfcf;
+	--mainTransition: all 0.3s linear;
+	--mainSpacing: 3px;
+	--lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+	--darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+  }
 .navbar{
     width: 100%;
-	padding-top:3%;
+	padding-top:1%;
 	height:80px; 
+	z-index: 1;
     .navbar-nav{
 		padding-left:20%;
      .nav-item{
@@ -11,7 +24,7 @@
 		 margin-left: 5%;
          .nav-link{
 				line-height: 1.2rem; 
-				opacity: 0.84;
+				opacity: 1;
 				color:white;
 				font-synthesis: bold;
 				font-weight: bold;
@@ -38,12 +51,14 @@ h1, h2, h3, h4, h5, h6, p{
 	font-family: 'Montserrat', sans-serif;
 }
 .header{
-	background-size: cover;
-	background-image: url('../../Assets/img/phoenix-flights-bg.jpg');
-	position: relative;
+	background: transparent;
+	//background-size: cover;
+	//background-image: url('../../Assets/img/phoenix-flights-bg.jpg');
+	position: fixed;
 	width: 100%;
-	z-index: 1;
-	height:80px;
+	top: 0;
+	left: 0;
+	z-index: 1000;
 	@media(min-width: 1200px){
 		max-height: 1000px;
 	}
@@ -53,7 +68,11 @@ h1, h2, h3, h4, h5, h6, p{
     text-transform: uppercase;
     .menu{
 	    margin-right: 5%;
-	    min-width: 15%;
+		min-width: 15%;
+		
+		@media screen and (min-width: 760px){
+			display: none;
+		}
     }
     .header-text{
 	    padding-top: 173px;
@@ -72,19 +91,23 @@ h1, h2, h3, h4, h5, h6, p{
 	    }
     }
 }
-/*hero*/
+/*hero
 .defaultHero,
 .roomsHero {
 	min-height: calc(90vh - 66px);
 	background: url("../../Assets/img/hotel_list_2.jpg");
 	display: flex;
 	align-items: center;
-	background-position: center;
+	background-position: center center;
 	justify-content: center;
-}
+	background-size: cover;
+}*/
 .roomsHero {
-	background-image: url("../../Assets/img/hotel_list_4.jpg");
+	background-image: url("../../Assets/img/hotel_list_3.jpg");
 	min-height: 60vh;
+	width: 100%;
+	background-size: cover;
+	background-position: center center;
 }
 
 /* Banner */
@@ -123,7 +146,7 @@ h1, h2, h3, h4, h5, h6, p{
 	border: 3px solid #fdb44d;
 	letter-spacing: 0.1rem;
 	background: transparent;
-	font-family: "montserrat";
+	font-family:Arial, Helvetica, sans-serif;
 	font-stretch: ultra-expanded;
 	font-size: 19px;
 	padding:0.3em;
@@ -136,7 +159,11 @@ h1, h2, h3, h4, h5, h6, p{
 	background: #d19239;
 	color: #000000;
 }
-
+.error {
+	text-align: center;
+	text-transform: uppercase;
+	margin: 2rem 0;
+  }
 .section-title{
 	text-align: center;
 	margin-bottom: 4rem;
@@ -144,13 +171,15 @@ h1, h2, h3, h4, h5, h6, p{
 
 .section-title h4{
 	font-size: 2rem;
-	letter-spacing: 0.2rem;
+	letter-spacing: 0.1rem;
 	text-transform: capitalize;
-	margin-bottom: 0.5rem;
-	font-family: montserrat;
+	margin-bottom: 0.2rem;
+	font-family: 'oxygen', sans-serif;
 	font-weight: bold;
-	padding-top: 4px;
+	padding-top: 20px;
+	//margin-top: 2rem;
 }
+
 
 .section-title div {
 	width: 5rem;
@@ -161,8 +190,9 @@ h1, h2, h3, h4, h5, h6, p{
 
 /* Services */
 .services {
-	background: #d4d4d4;
+	background: #ebe8e8;
 	text-align: center;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .services-center {
    width: 90vw;
@@ -174,10 +204,12 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 .services h6 {
+	font-size: 1.2rem;
 	letter-spacing: 0.1em;
 	text-transform: capitalize;
 	font-weight: bold;
 	color:#1a1b1f;
+    font-family: 'oxygen', sans-serif;
 }
 .service span {
 	font-size:50px;
@@ -186,10 +218,302 @@ h1, h2, h3, h4, h5, h6, p{
 	border-radius: 30px;
 
 }
+.service p{
+	font-size:1rem;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.featured-rooms {
+	padding: 5rem 0;
+  }
+  .featured-rooms-center {
+	width: 80vw;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+	grid-row-gap: 2rem;
+	grid-column-gap: 40px;
+  }
+  @media screen and (min-width: 776px) {
+	.featured-rooms-center {
+	  width: 90vw;
+	  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+	}
+  }
+  @media screen and (min-width: 992px) {
+	.featured-rooms-center {
+	  width: 95vw;
+	  max-width: 1170px;
+	}
+  }
+  /* end pf featured rooms */
+  /* room */
+  .room {
+	box-shadow: var(--lightShadow);
+	transition: var(--mainTransition);
+	background-color: #cfcfcf;
+  }
+  .room:hover {
+	box-shadow: var(--darkShadow);
+  }
+  
+  .img-container {
+	position: relative;
+  }
+  .img-container img {
+	width: 100%;
+	display: block;
+	transition: var(--mainTransition);
+  }
+  .price-top {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.8);
+	color: var(--mainWhite);
+	padding: 0.3rem 0.6rem 0.5rem;
+	border-bottom-right-radius: 1rem;
+	font-size: 0.5rem;
+	text-align: center;
+	transition: var(--mainTransition);
+  }
+  .price-top h6 {
+	margin-bottom: 0;
+	font-size: 0.9rem;
+	font-weight: 300;
+	letter-spacing: var(--mainSpacing);
+  }
+  .room-link {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: scale(0);
+	transition: all 0.3s linear;
+  }
+  .img-container:hover {
+	background: rgba(0, 0, 0, 0.8);
+  }
+  .img-container:hover img {
+	opacity: 0.3;
+  }
+  .img-container:hover .price-top {
+	opacity: 0;
+  }
+  .img-container:hover .room-link {
+	transform: translate(-50%, -50%) scale(1);
+  }
+  .room-info {
+	background: var(--darkGrey);
+	text-transform: capitalize;
+	padding: 0.5rem 0;
+	text-align: center;
+	font-weight: 700;
+	letter-spacing: var(--mainSpacing);
+  }
+  /* end of room  */
+  /*single room*/
+  .single-room{
+	  padding: 2rem 0 0 0;
+	  background-image: url('../../Assets/img/phoenix-flights-bg.jpg');
+      .single-bg{
+		margin: 0 auto 3rem auto;
+		  width: 85vw;
+		  background-color: rgb(238, 238, 238);
+		  border-radius: 10px;
+		  
+	  }
+	.single-room-images{
+		background-color: #fff;
+		width: 80vw;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		grid-row-gap: 2rem;
+		grid-column-gap: 50px;
+	
+	img{
+		margin: 1rem auto;
+		width:100%;
+		display: flex;
+	}
+	}
+	.single-room-info{
+		width: 80vw;
+		padding: 1rem 0.3rem;
+        display: grid;
+        grid-template-columns: 1fr;
+		margin: 2rem auto;
+		background-color: rgb(238, 238, 238);
+	h3{
+       text-decoration: underline;
+	   text-decoration-color: rgba(253, 180, 70, 0.5);
+	   font-weight: bold;
+	   text-transform: capitalize;
+	}
+	.desc{
+		background-color: #fff;
+		padding: 0.3rem 0.8rem;
+		display: grid;
+		grid-template-columns:  1fr;
+	}
+	.desc,
+    .info {
+        margin: 1rem 0;
+		}
+		
+		.desc p {
+			line-height: 1.5;
+			width: 50%;
+			font-size:1rem;
+			font-family: Helvetica, sans-serif;
+			font-size: 1.4em;
+		  }
+		  .info h3,
+		  .info h6 {
+			text-transform: capitalize;
+			letter-spacing: var(--mainSpacing);
+		  }
+		  
+		  .info h6 {
+			font-weight: 300;
+		  }
+    	}
+	
+  }
+
+  .room-extra{
+   width: 80vw;
+   margin: 0 auto 3rem auto;
+
+   
+  .extras {
+	list-style-type: none;
+	font-weight: bold;
+	text-decoration: underline;
+	text-decoration-color: rgba(253, 180, 70, 0.5);
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+	grid-column-gap: 2rem;
+	grid-row-gap: 1rem;
+  }
+  }
+  .room-extra h6 {
+	text-transform: capitalize;
+	letter-spacing: var(--mainSpacing);
+	font-weight: bold;
+	text-decoration: underline;
+	text-decoration-color: rgba(253, 180, 70, 0.5);
+  }
+  /*end of singleRoom */
+
+  .room-container{
+	  padding: 5rem 2rem;
+  }
+  
+  .roomslist-center {
+	width: 90vw;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+	grid-row-gap: 2rem;
+	grid-column-gap: 30px;
+  }
+
+  @media screen and (min-width: 776px) {
+     .roomslist-center{
+		 width: 90vw;
+	 }
+	 
+  }
+
+  
+  @media screen and (min-width: 992px) {
+	.single-room-images,
+	.single-room-info,
+	.room-extras {
+	  width: 95vw;
+	  max-width: 1170px;
+	}
+	.roomslist{
+		width: 80vw;
+		height: 1170px;
+	}
+	.room-container{
+		padding:5rem 3rem;
+	}
+	.single-room-info {
+	  display: grid;
+	  grid-template-columns: 1fr 1fr;
+	  grid-column-gap: 2rem;
+	}
+	.info {
+	  padding-left: 3rem;
+	}
+  }
+ /*rooms list filter*/
+  .filter-container {
+	padding: 5rem 0;
+	
+  }
+  .filter-form {
+	padding: 2rem;
+	width: 60vw;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(202px, 1fr));
+	grid-row-gap: 2rem;
+	grid-column-gap: 40px;
+  }
+  .form-group {
+	text-transform: capitalize;
+  }
+  .form-group label {
+	display: block;
+	letter-spacing: var(--mainSpacing);
+	margin-bottom: 0.5rem;
+  }
+  .form-control {
+	width: 100%;
+	background: transparent;
+	font-size: 1rem;
+  }
+  .size-inputs {
+	display: flex;
+  }
+  .size-input {
+	width: 40%;
+	padding: 0.2rem;
+	border: 1px solid var(--mainBlack);
+	border-radius: 0.3rem;
+	margin-right: 0.3rem;
+  }
+  .single-extra label {
+	display: inline-block;
+	font-size: 0.8rem;
+	margin-left: 0.5rem;
+  }
+  @media screen and (min-width: 776px) {
+	.filter-form {
+	  width: 70vw;
+	}
+  }
+  @media screen and (min-width: 992px) {
+	.filter-form {
+	  width: 95vw;
+	  max-width: 1170px;
+	}
+  }
 .footer{
-	background: rgb(82, 9, 134);
+	background-color: rgb(20, 7, 68);
 	width: 100%;
 	height:75px;
-	
+	color: #fff;
+	padding:2rem 0;
+	margin-top: 2rem;
 	}
-	
+	@media screen and(max-width: 760px){
+		.menu{
+			img{
+			display: none;
+			}
+		}
+	}

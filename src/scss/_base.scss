@@ -8,6 +8,7 @@ html, body{
   width: 100%;
   font-size: 100%;
   overflow-x: hidden !important;
+  box-sizing: border-box;
 }
 body{
   color: $white;
