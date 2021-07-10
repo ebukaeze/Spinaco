@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import Hero from "../components/layouts/Hero";
 import Banner from "../components/layouts/Banner";
 import { Link } from 'react-router-dom';
-import RoomList from '../components/containers/rooms-list'
+import RoomsContainer from '../components/containers/RoomsContainer'; 
 
-class Rooms extends Component{
-    render(){
+
+const Rooms = () => {
+
         return(
             <div>
          <Hero hero="roomsHero">
@@ -15,9 +16,9 @@ class Rooms extends Component{
                  </Link>
              </Banner>
          </Hero>
-         <RoomList />
+        <RoomsContainer />
         </div>
         );
-    }
+    
 }
 export default Rooms;
