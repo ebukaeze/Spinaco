@@ -1,6 +1,6 @@
 import React from'react';
 import Title from './title';
-import { FaCocktail, FaHiking, FaShuttleVan, FaBeer } from 'react-icons/fa';
+import { FaCocktail, FaHiking, FaWifi, FaBeer } from 'react-icons/fa';
 
 
  class Services extends React.Component{
@@ -25,9 +25,9 @@ import { FaCocktail, FaHiking, FaShuttleVan, FaBeer } from 'react-icons/fa';
         },
 
         {
-            icon:<FaShuttleVan />,
-            title: "Free transportation",
-            info: "Having fun on a sunny day without any limitation, enjoy endless adventure"
+            icon:<FaWifi />,
+            title: "Free WiFi",
+            info: "Free unlimited wifi connection for all our guest, "
         }
       
      ]
