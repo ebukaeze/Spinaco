@@ -1,15 +1,27 @@
-import React from 'react';
+import React, {useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import logo  from '../../Assets/logo.png';
 import menu from '../../Assets/menu.png';
 
 
-export class Header extends React.Component{
-  render(){
+  function Header() {
+    const [show, setShow ] = useState(false);
+
+    useEffect(() => {
+      window.addEventListener("scroll", () => {
+        if (window.scroll > 200 ){
+          setShow(true)
+        } else setShow(false)
+      })
+      return () => {
+      window.removeEventListener("scroll");
+      };
+    }, [])
+
     return(
    <div className="container-fluid2">
     <div className="header">
-     <nav className="navbar navbar-expand-lg navbar-transparent" id="navigation">
+     <nav className={`navbar navbar-expand-lg navbar-transparent ${show && "nav-active"}`} id="navigation">
       <Link to="/" className="navbar-brand">
        <img src={ logo } className="d-inline-block align-top" alt="brand logo"/>
      </Link>
@@ -36,13 +48,13 @@ export class Header extends React.Component{
            </li>
      </ul>
      <div className="menu order-3 d-flex justify-content-end">
-					<img className="img-fluid" src={menu}/>
+					<img className="img- sideIcon" src={menu}/>
 				</div>
 			</div>
     </nav>
+    
     </div>
 </div>
-    );
- } 
+    )
 }
 export default Header;

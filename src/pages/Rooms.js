@@ -9,13 +9,12 @@ const Rooms = () => {
 
         return(
             <div>
-         <Hero hero="roomsHero">
-             <Banner title="Our Rooms">
+         {/* <Hero /> */}
+             {/* <Banner title="Our Rooms">
                  <Link to="/" className="btn-primary">
                      Return Home
                  </Link>
-             </Banner>
-         </Hero>
+             </Banner> */}
         <RoomsContainer />
         </div>
         );
